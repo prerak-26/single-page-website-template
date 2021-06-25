@@ -106,7 +106,7 @@ nav ul li a:hover{
 .homebox .boxitem .white{
     width: 100%;
     height: 60%;
-    background: #fff;
+    background: #000000;
 }
 
 .homebox .boxitem .white img{
@@ -116,6 +116,10 @@ nav ul li a:hover{
     width: 100%;
     height: 60%;
     object-fit: cover;
+	transition: all 0.2s linear;
+}
+.homebox .boxitem .white img:hover{
+	transform: scale(0.9);
 }
 
 /*-------------products section css --------------*/
