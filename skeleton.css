@@ -1,0 +1,117 @@
+.skel-box{
+    width: 100%;
+    height: 95vh;
+    padding-top: 50px;
+    overflow: hidden;
+    background: #000000;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    position: relative;
+}
+.final_text{
+    position: relative;
+    padding: 0px 20px;
+    color: aliceblue;
+}
+.final_text p:nth-child(1){
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.final_text p:nth-child(2){
+  font-size: 1.5rem;
+  color:#aaa6a6;
+  font-weight:lighter;
+}
+.final_text p:nth-child(3){
+  line-height: 2.0rem;
+  font-weight: lighter;
+  color:#aaa6a6;
+}
+
+
+
+.final__layers {
+    top:10%;
+    position: relative;
+    height: 95vh;
+    width: 360px;
+  }
+  .final__layers .skimg{
+    display: none;
+  }
+  
+  .final__layers img {
+    position: absolute;
+    left: 14%;
+    max-width: 100%;
+    height: 100%;
+    transition: all ease 1600ms;
+    transform-style: preserve-3d;
+  }
+  
+  .final__layers:hover img {
+    
+    transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(150px);
+  }
+  
+  .final__layers img.mid {
+    padding-left: 10%;
+    padding-top: 1%;
+    height: 98%;
+    width: 320px;
+    left: 20px;
+  }
+  
+  .final__layers img.top {
+    padding-left: 8%;
+    width: 280px;
+    top: -15px;
+  }
+  
+  .final__layers img.tippy {
+    padding-left: 20%;
+    width: 230px;
+    top: -150px;
+    left: 40px;
+  }
+  
+  .final__layers:hover img.mid {
+    transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(210px);
+  }
+  
+  .final__layers:hover img.top {
+    transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(250px);
+  }
+  
+  .final__layers:hover img.tippy {
+    transform: perspective(1200px) rotateX(60deg) rotateY(20deg) rotateZ(-25deg) translateX(-5px) translateY(20px) translateZ(210px);
+  }
+
+  @media screen and (max-width: 1000px){
+      .skel-box{
+          grid-template-columns: repeat(1,1fr);
+          height: 1670px;
+      }
+      .final__layers{
+          top: 5%;
+          justify-self: center;
+          width: 100%;
+          height: 50%;
+      }
+      .final__layers .mid,.back,.top,.tippy{
+        display: none;
+      }
+      .final__layers .skimg{
+        display: block;
+        height: 550px;
+        width: 500px;
+      }
+      
+      .final_text p:nth-child(3){
+        line-height: 2.5rem;
+      }
+      .final_text p:nth-child(2){
+        display: none;
+      }
+      
+  }
